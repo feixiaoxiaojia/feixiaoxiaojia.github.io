@@ -8,6 +8,9 @@
     color: #999;
     -webkit-font-smoothing: antialiased;
 }
+.panel-cover__subtitle{
+	 text-align:center;
+}
 .panel-cover__divider {
     width: 75%;
     margin: 20px auto;
