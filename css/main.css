@@ -5,11 +5,18 @@
     font-size: 0.6em;
     font-weight: lighter;
     letter-spacing: 3px;
-    color: #CCCCCC;
+    color: #999;
     -webkit-font-smoothing: antialiased;
 }
 .panel-cover__divider {
     width: 50%;
     margin: 20px auto;
     border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+.panel-cover__divider--secondary {
+    width: 15%;
+}
+.panel-cover__description {
+    margin: 0 30px;
+	color: #999;
 }
