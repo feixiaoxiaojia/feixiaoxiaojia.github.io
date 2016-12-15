@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+.panel-subtitle {
+    font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-size: 0.6em;
+    font-weight: lighter;
+    letter-spacing: 3px;
+    color: #CCCCCC;
+    -webkit-font-smoothing: antialiased;
+}
+.panel-cover__divider {
+    width: 50%;
+    margin: 20px auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
