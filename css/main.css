@@ -9,6 +9,7 @@
     -webkit-font-smoothing: antialiased;
 }
 .panel-cover__subtitle{
+	 display:block;
 	 text-align:center;
 }
 .panel-cover__divider {
