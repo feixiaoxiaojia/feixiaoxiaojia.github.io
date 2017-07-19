@@ -269,6 +269,73 @@ var _hmt = _hmt || [];
 
 
   
+    <article id="post-countClock" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="JS中的计时器方法"><a href="#JS中的计时器方法" class="headerlink" title="JS中的计时器方法"></a>JS中的计时器方法</h1><hr>
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>实现一个打点计时器，要求 <br><br>1、从 start 到 end（包含 start 和 end），每隔 100 毫秒 console.log 一个数字，每次数字增幅为 1 <br><br>2、返回的对象中需要包含一个 cancel 方法，用于停止定时操作<br><br>3、第一个数需要立即输出<br></p>
+<p>##思路##</p>
+<p><table cellspacing="0" style="border:1px solid #e6e6e6;text-align:left"></table></p>
+<p><tr style="background-color:#F3F3F3;"><br>    <th>方法</th><br>    <th>描述</th><br></tr></p>
+<p><tr><br>    <td>setInterval</td><br>    <td>周期性的调用一个函数(function)或者执行一段代码</td><br></tr></p>
+<p><tr><br>    <td>clearInterval</td><br>    <td>取消调用setInterval设置的重复执行动作</td><br></tr></p>
+<p><tr><br>    <td>setTimeout</td><br>    <td>在指定的延迟时间之后调用一个函数(function)或者执行一段代码片段</td><br></tr></p>
+<p><tr><br>    <td>clearTimeout</td><br>    <td>方法可取消由setTimeout方法设置的timeout</td><br></tr><br></p>
+<p>###例子###<br>    var id=setInterval(function(){<br>        consoel.log(“log”)<br>    },1000)</p>
+<pre><code>clearInterval(id);
+</code></pre><p><br></p>
+<pre><code>var id=setTimeout(function() {
+    alert(&quot;Hello World!&quot;);
+}, 500);
+
+clearTimeout(id);
+</code></pre><p><font color="red">提示：</font>setTimeout()止执行一次code。如果要多次调用，可以使用setInterval()或者让code自身再次调用setTimeout().</p>
+<p>##解题方法##</p>
+<p>###setInterval方法###<br>    function count(start, end) {<br>        console.log(start);<br>        var id=setInterval(function(){<br>            if(start&lt;end){<br>                console.log(++start);<br>            }<br>        },100);<br>        return {<br>            cancel:function(){<br>                clearInterval(id);<br>            }<br>        }<br>    }</p>
+<pre><code>//测试调用
+var cancel=count(1,1000);
+cancel.cancel();//即可停止计数
+</code></pre><p>###setTimeout方法###<br>    function count(start,end){<br>        if(start&lt;=end){<br>            console.log(start++);<br>            id=setTimeout(function(){<br>                count(start,end);<br>            },100);<br>        }<br>        return {<br>            cancel:function(){<br>                clearTimeout(id);<br>            }<br>        }<br>    }</p>
+<pre><code>//测试调用
+var cancel=count(1,1000);
+cancel.cancel();//即可停止计数
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/腾讯课堂笔试题/">腾讯课堂笔试题</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/16/countClock/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
   
 
 
@@ -325,6 +392,10 @@ var _hmt = _hmt || [];
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">腾讯课堂笔试题</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
