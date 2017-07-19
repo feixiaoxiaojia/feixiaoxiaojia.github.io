@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://feixiaoxiaojia.github.io">
   <title>JS中的计时器方法 | Xiao jia&#39;s Daily</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JS中的计时器方法 题目描述实现一个打点计时器，要求 1、从 start 到 end（包含 start 和 end），每隔 100 毫秒 console.log 一个数字，每次数字增幅为 1 2、返回的对象中需要包含一个 cancel 方法，用于停止定时操作3、第一个数需要立即输出 ##思路##      方法    描述     setInterval    周期性的调用一个函数(functio">
+  <meta name="description" content="JS中的计时器方法 题目描述实现一个打点计时器，要求 1、从 start 到 end（包含 start 和 end），每隔 100 毫秒 console.log 一个数字，每次数字增幅为 1 2、返回的对象中需要包含一个 cancel 方法，用于停止定时操作3、第一个数需要立即输出 思路     方法    描述     setInterval    周期性的调用一个函数(function)或者执">
 <meta name="keywords" content="腾讯课堂笔试题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS中的计时器方法">
 <meta property="og:url" content="http://feixiaoxiaojia.github.io/2017/07/16/countClock/index.html">
 <meta property="og:site_name" content="Xiao jia&#39;s Daily">
-<meta property="og:description" content="JS中的计时器方法 题目描述实现一个打点计时器，要求 1、从 start 到 end（包含 start 和 end），每隔 100 毫秒 console.log 一个数字，每次数字增幅为 1 2、返回的对象中需要包含一个 cancel 方法，用于停止定时操作3、第一个数需要立即输出 ##思路##      方法    描述     setInterval    周期性的调用一个函数(functio">
-<meta property="og:updated_time" content="2017-07-19T02:59:44.476Z">
+<meta property="og:description" content="JS中的计时器方法 题目描述实现一个打点计时器，要求 1、从 start 到 end（包含 start 和 end），每隔 100 毫秒 console.log 一个数字，每次数字增幅为 1 2、返回的对象中需要包含一个 cancel 方法，用于停止定时操作3、第一个数需要立即输出 思路     方法    描述     setInterval    周期性的调用一个函数(function)或者执">
+<meta property="og:updated_time" content="2017-07-19T03:09:00.443Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS中的计时器方法">
-<meta name="twitter:description" content="JS中的计时器方法 题目描述实现一个打点计时器，要求 1、从 start 到 end（包含 start 和 end），每隔 100 毫秒 console.log 一个数字，每次数字增幅为 1 2、返回的对象中需要包含一个 cancel 方法，用于停止定时操作3、第一个数需要立即输出 ##思路##      方法    描述     setInterval    周期性的调用一个函数(functio">
+<meta name="twitter:description" content="JS中的计时器方法 题目描述实现一个打点计时器，要求 1、从 start 到 end（包含 start 和 end），每隔 100 毫秒 console.log 一个数字，每次数字增幅为 1 2、返回的对象中需要包含一个 cancel 方法，用于停止定时操作3、第一个数需要立即输出 思路     方法    描述     setInterval    周期性的调用一个函数(function)或者执">
   
     <link rel="alternative" href="/atom.xml" title="Xiao jia&#39;s Daily" type="application/atom+xml">
   
@@ -232,29 +232,56 @@ var _hmt = _hmt || [];
       
         <h1 id="JS中的计时器方法"><a href="#JS中的计时器方法" class="headerlink" title="JS中的计时器方法"></a>JS中的计时器方法</h1><hr>
 <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>实现一个打点计时器，要求 <br><br>1、从 start 到 end（包含 start 和 end），每隔 100 毫秒 console.log 一个数字，每次数字增幅为 1 <br><br>2、返回的对象中需要包含一个 cancel 方法，用于停止定时操作<br><br>3、第一个数需要立即输出<br></p>
-<p>##思路##</p>
-<p><table cellspacing="0" style="border:1px solid #e6e6e6;text-align:left"></table></p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p><table cellspacing="0" style="border:1px solid #e6e6e6;text-align:left"></table></p>
 <p><tr style="background-color:#F3F3F3;"><br>    <th>方法</th><br>    <th>描述</th><br></tr></p>
 <p><tr><br>    <td>setInterval</td><br>    <td>周期性的调用一个函数(function)或者执行一段代码</td><br></tr></p>
 <p><tr><br>    <td>clearInterval</td><br>    <td>取消调用setInterval设置的重复执行动作</td><br></tr></p>
 <p><tr><br>    <td>setTimeout</td><br>    <td>在指定的延迟时间之后调用一个函数(function)或者执行一段代码片段</td><br></tr></p>
 <p><tr><br>    <td>clearTimeout</td><br>    <td>方法可取消由setTimeout方法设置的timeout</td><br></tr><br></p>
-<p>###例子###<br>    var id=setInterval(function(){<br>        consoel.log(“log”)<br>    },1000)</p>
-<pre><code>clearInterval(id);
-</code></pre><p><br></p>
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><pre><code>var id=setInterval(function(){    
+    consoel.log(&quot;log&quot;)
+},1000)
+
+clearInterval(id);
+</code></pre><p> <br></p>
 <pre><code>var id=setTimeout(function() {
-    alert(&quot;Hello World!&quot;);
+alert(&quot;Hello World!&quot;);
 }, 500);
 
 clearTimeout(id);
 </code></pre><p><font color="red">提示：</font>setTimeout()止执行一次code。如果要多次调用，可以使用setInterval()或者让code自身再次调用setTimeout().</p>
-<p>##解题方法##</p>
-<p>###setInterval方法###<br>    function count(start, end) {<br>        console.log(start);<br>        var id=setInterval(function(){<br>            if(start&lt;end){<br>                console.log(++start);<br>            }<br>        },100);<br>        return {<br>            cancel:function(){<br>                clearInterval(id);<br>            }<br>        }<br>    }</p>
-<pre><code>//测试调用
+<h2 id="解题方法"><a href="#解题方法" class="headerlink" title="解题方法"></a>解题方法</h2><h3 id="setInterval方法"><a href="#setInterval方法" class="headerlink" title="setInterval方法"></a>setInterval方法</h3><pre><code>function count(start, end) {
+    console.log(start);
+    var id=setInterval(function(){
+        if(start&lt;end){
+            console.log(++start);
+        }
+    },100);
+    return {
+        cancel:function(){
+            clearInterval(id);
+        } 
+    }    
+}
+
+//测试调用
 var cancel=count(1,1000);
 cancel.cancel();//即可停止计数
-</code></pre><p>###setTimeout方法###<br>    function count(start,end){<br>        if(start&lt;=end){<br>            console.log(start++);<br>            id=setTimeout(function(){<br>                count(start,end);<br>            },100);<br>        }<br>        return {<br>            cancel:function(){<br>                clearTimeout(id);<br>            }<br>        }<br>    }</p>
-<pre><code>//测试调用
+</code></pre><h3 id="setTimeout方法"><a href="#setTimeout方法" class="headerlink" title="setTimeout方法"></a>setTimeout方法</h3><pre><code>function count(start,end){    
+    if(start&lt;=end){
+        console.log(start++);
+        id=setTimeout(function(){
+            count(start,end);
+        },100);
+    }
+    return {
+        cancel:function(){
+            clearTimeout(id);
+        } 
+    }     
+}
+
+//测试调用
 var cancel=count(1,1000);
 cancel.cancel();//即可停止计数
 </code></pre>
