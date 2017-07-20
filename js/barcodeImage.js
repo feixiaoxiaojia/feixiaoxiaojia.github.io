@@ -7,9 +7,9 @@ function  showImg(id){
 	document.getElementById(id).style.display='block';
 	var imgItem=document.getElementById(id);
 	var imgOffset=imgItem.offsetHeight;	
-	console.log(clientHeight+","+itemTop);
-	console.log(imgOffset);
-	console.log(clientHeight-itemTop);
+	// console.log(clientHeight+","+itemTop);
+	// console.log(imgOffset);
+	// console.log(clientHeight-itemTop);
 	if(imgOffset>clientHeight-itemTop){
 		document.getElementById(id).style.position="fixed";
 		document.getElementById(id).style.bottom="10px";
