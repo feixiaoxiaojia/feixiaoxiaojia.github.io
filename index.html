@@ -215,11 +215,35 @@ var _hmt = _hmt || [];
     <article id="post-上线流程要点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/20/上线流程要点/">上线回滚流程要点</a>
+    </h1>
+  
+
+        <a href="/2017/07/20/上线流程要点/" class="archive-article-date">
+  	<time datetime="2017-07-20T01:12:02.855Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-20</time>
+</a>
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>title:上线流程要点<br>date:2017-07-20 8：58</p>
-<h2 id="tags-面试"><a href="#tags-面试" class="headerlink" title="tags:面试"></a>tags:面试</h2>
+        <h2 id="上线流程要点"><a href="#上线流程要点" class="headerlink" title="上线流程要点"></a>上线流程要点</h2><blockquote>
+<ul>
+<li>将测试完成的代码提交到git版本库的master分支</li>
+<li>将当前服务器的代码全部打包并记录版本号，备份（如，v1.0）</li>
+<li>将master分支的代码提交覆盖到线上服务器，生成新版本号（如，v1.1）</li>
+</ul>
+</blockquote>
+<h2 id="回滚流程要点"><a href="#回滚流程要点" class="headerlink" title="回滚流程要点"></a>回滚流程要点</h2><blockquote>
+<ul>
+<li>将当前服务器的代码打包并记录版本号，备份（如，v1.1）</li>
+<li>将备份的上一个版本（如v1.0）号解压，覆盖到线上服务器，并生成新版本号（如，v1.2）</li>
+</ul>
+</blockquote>
+
       
 
       
@@ -227,6 +251,11 @@ var _hmt = _hmt || [];
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
+	</div>
+
       
 
       
@@ -591,11 +620,15 @@ cancel.cancel();//即可停止计数
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)">call/apply</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">腾讯课堂笔试题</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">call/apply</a>
+                <a href="javascript:void(0)">面试</a>
               </li>
             
             <div class="clearfix"></div>

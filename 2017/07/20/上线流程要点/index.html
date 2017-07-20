@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://feixiaoxiaojia.github.io">
-  <title>Xiao jia&#39;s Daily</title>
+  <title>上线回滚流程要点 | Xiao jia&#39;s Daily</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title:上线流程要点date:2017-07-20 8：58 tags:面试">
+  <meta name="description" content="上线流程要点  将测试完成的代码提交到git版本库的master分支 将当前服务器的代码全部打包并记录版本号，备份（如，v1.0） 将master分支的代码提交覆盖到线上服务器，生成新版本号（如，v1.1）   回滚流程要点  将当前服务器的代码打包并记录版本号，备份（如，v1.1） 将备份的上一个版本（如v1.0）号解压，覆盖到线上服务器，并生成新版本号（如，v1.2）">
+<meta name="keywords" content="面试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Xiao jia&#39;s Daily">
+<meta property="og:title" content="上线回滚流程要点">
 <meta property="og:url" content="http://feixiaoxiaojia.github.io/2017/07/20/上线流程要点/index.html">
 <meta property="og:site_name" content="Xiao jia&#39;s Daily">
-<meta property="og:description" content="title:上线流程要点date:2017-07-20 8：58 tags:面试">
-<meta property="og:updated_time" content="2017-07-20T01:00:11.059Z">
+<meta property="og:description" content="上线流程要点  将测试完成的代码提交到git版本库的master分支 将当前服务器的代码全部打包并记录版本号，备份（如，v1.0） 将master分支的代码提交覆盖到线上服务器，生成新版本号（如，v1.1）   回滚流程要点  将当前服务器的代码打包并记录版本号，备份（如，v1.1） 将备份的上一个版本（如v1.0）号解压，覆盖到线上服务器，并生成新版本号（如，v1.2）">
+<meta property="og:updated_time" content="2017-07-20T01:20:43.447Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Xiao jia&#39;s Daily">
-<meta name="twitter:description" content="title:上线流程要点date:2017-07-20 8：58 tags:面试">
+<meta name="twitter:title" content="上线回滚流程要点">
+<meta name="twitter:description" content="上线流程要点  将测试完成的代码提交到git版本库的master分支 将当前服务器的代码全部打包并记录版本号，备份（如，v1.0） 将master分支的代码提交覆盖到线上服务器，生成新版本号（如，v1.1）   回滚流程要点  将当前服务器的代码打包并记录版本号，备份（如，v1.1） 将备份的上一个版本（如v1.0）号解压，覆盖到线上服务器，并生成新版本号（如，v1.2）">
   
     <link rel="alternative" href="/atom.xml" title="Xiao jia&#39;s Daily" type="application/atom+xml">
   
@@ -214,11 +215,35 @@ var _hmt = _hmt || [];
             <article id="post-上线流程要点" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      上线回滚流程要点
+    </h1>
+  
+
+        <a href="/2017/07/20/上线流程要点/" class="archive-article-date">
+  	<time datetime="2017-07-20T01:12:02.855Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-20</time>
+</a>
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>title:上线流程要点<br>date:2017-07-20 8：58</p>
-<h2 id="tags-面试"><a href="#tags-面试" class="headerlink" title="tags:面试"></a>tags:面试</h2>
+        <h2 id="上线流程要点"><a href="#上线流程要点" class="headerlink" title="上线流程要点"></a>上线流程要点</h2><blockquote>
+<ul>
+<li>将测试完成的代码提交到git版本库的master分支</li>
+<li>将当前服务器的代码全部打包并记录版本号，备份（如，v1.0）</li>
+<li>将master分支的代码提交覆盖到线上服务器，生成新版本号（如，v1.1）</li>
+</ul>
+</blockquote>
+<h2 id="回滚流程要点"><a href="#回滚流程要点" class="headerlink" title="回滚流程要点"></a>回滚流程要点</h2><blockquote>
+<ul>
+<li>将当前服务器的代码打包并记录版本号，备份（如，v1.1）</li>
+<li>将备份的上一个版本（如v1.0）号解压，覆盖到线上服务器，并生成新版本号（如，v1.2）</li>
+</ul>
+</blockquote>
+
       
 
       
@@ -247,6 +272,11 @@ var _hmt = _hmt || [];
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
+	</div>
+
       
 
       
@@ -382,11 +412,15 @@ var _hmt = _hmt || [];
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)">call/apply</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">腾讯课堂笔试题</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">call/apply</a>
+                <a href="javascript:void(0)">面试</a>
               </li>
             
             <div class="clearfix"></div>
