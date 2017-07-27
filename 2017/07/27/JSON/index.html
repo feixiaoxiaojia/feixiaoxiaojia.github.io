@@ -6,19 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://feixiaoxiaojia.github.io">
-  <title>方法定义 | Xiao jia&#39;s Daily</title>
+  <title>Xiao jia&#39;s Daily</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="转载：https://cwjinterview.github.io/2017/04/23/Call_apply区别/ Call方法语法：语法：call([thisObj[,arg1[, arg2[,   [,.argN]]]]])  定义：调用一个对象的一个方法，以另一个对象替换当前对象。 说明： call 方法可以用来代替另一个对象调用一个方法。call 方法可将一个函数的对象上下文从初始的上下">
-<meta name="keywords" content="call&#x2F;apply">
+  <meta name="description" content="title:JSON基础知识学习date:7/26/2017 6:12:37 PM tags:Javscript高级程序设计JSON是一种数据格式，不是一种编程语言。也是Javascript的一种内置对象。 ##语法##JSON有三种类型的值：简单值、对象、数组 1.简单值：可以在JSON中表示字符串、数组、布尔值、null。但是JSON不支持Javascript中的特殊值undefined。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="方法定义">
-<meta property="og:url" content="http://feixiaoxiaojia.github.io/2017/07/19/Call_apply区别/index.html">
+<meta property="og:title" content="Xiao jia&#39;s Daily">
+<meta property="og:url" content="http://feixiaoxiaojia.github.io/2017/07/27/JSON/index.html">
 <meta property="og:site_name" content="Xiao jia&#39;s Daily">
-<meta property="og:description" content="转载：https://cwjinterview.github.io/2017/04/23/Call_apply区别/ Call方法语法：语法：call([thisObj[,arg1[, arg2[,   [,.argN]]]]])  定义：调用一个对象的一个方法，以另一个对象替换当前对象。 说明： call 方法可以用来代替另一个对象调用一个方法。call 方法可将一个函数的对象上下文从初始的上下">
-<meta property="og:updated_time" content="2017-07-19T03:43:41.154Z">
+<meta property="og:description" content="title:JSON基础知识学习date:7/26/2017 6:12:37 PM tags:Javscript高级程序设计JSON是一种数据格式，不是一种编程语言。也是Javascript的一种内置对象。 ##语法##JSON有三种类型的值：简单值、对象、数组 1.简单值：可以在JSON中表示字符串、数组、布尔值、null。但是JSON不支持Javascript中的特殊值undefined。">
+<meta property="og:updated_time" content="2017-07-27T03:55:07.564Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="方法定义">
-<meta name="twitter:description" content="转载：https://cwjinterview.github.io/2017/04/23/Call_apply区别/ Call方法语法：语法：call([thisObj[,arg1[, arg2[,   [,.argN]]]]])  定义：调用一个对象的一个方法，以另一个对象替换当前对象。 说明： call 方法可以用来代替另一个对象调用一个方法。call 方法可将一个函数的对象上下文从初始的上下">
+<meta name="twitter:title" content="Xiao jia&#39;s Daily">
+<meta name="twitter:description" content="title:JSON基础知识学习date:7/26/2017 6:12:37 PM tags:Javscript高级程序设计JSON是一种数据格式，不是一种编程语言。也是Javascript的一种内置对象。 ##语法##JSON有三种类型的值：简单值、对象、数组 1.简单值：可以在JSON中表示字符串、数组、布尔值、null。但是JSON不支持Javascript中的特殊值undefined。">
   
     <link rel="alternative" href="/atom.xml" title="Xiao jia&#39;s Daily" type="application/atom+xml">
   
@@ -253,94 +252,90 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Call_apply区别" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JSON" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      方法定义
-    </h1>
-  
-
-        <a href="/2017/07/19/Call_apply区别/" class="archive-article-date">
-  	<time datetime="2017-07-19T03:26:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-19</time>
-</a>
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>转载：<a href="https://cwjinterview.github.io/2017/04/23/Call_apply区别/" title="https://cwjinterview.github.io/2017/04/23/Call_apply区别/" target="_blank" rel="external">https://cwjinterview.github.io/2017/04/23/Call_apply区别/</a></p>
-<h2 id="Call方法"><a href="#Call方法" class="headerlink" title="Call方法"></a>Call方法</h2><p>语法：语法：call([thisObj[,arg1[, arg2[,   [,.argN]]]]]) </p>
-<p>定义：调用一个对象的一个方法，以另一个对象替换当前对象。</p>
-<p>说明： call 方法可以用来代替另一个对象调用一个方法。call 方法可将一个函数的对象上下文从初始的上下文改变为由 thisObj 指定的新对象。<br>如果没有提供 thisObj 参数，那么 Global 对象被用作 thisObj。 </p>
-<h2 id="apply方法"><a href="#apply方法" class="headerlink" title="apply方法"></a>apply方法</h2><p>语法：apply([thisObj[,argArray]]) </p>
-<p>定义：应用某一对象的一个方法，用另一个对象替换当前对象。 </p>
-<p>说明： 如果 argArray 不是一个有效的数组或者不是 arguments 对象，那么将导致一个 TypeError。<br>如果没有提供 argArray 和 thisObj 任何一个参数，那么 Global 对象将被用作 thisObj， 并且无法被传递任何参数。</p>
-<p>唯一区别是apply接受的是数组参数，call接受的是连续参数。</p>
-<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><pre><code>&lt;script&gt;
-function add(j, k){
-    console.log(j+k);
+        <hr>
+<p>title:JSON基础知识学习<br>date:7/26/2017 6:12:37 PM</p>
+<h2 id="tags-Javscript高级程序设计"><a href="#tags-Javscript高级程序设计" class="headerlink" title="tags:Javscript高级程序设计"></a>tags:Javscript高级程序设计</h2><p>JSON是一种数据格式，不是一种编程语言。也是Javascript的一种内置对象。</p>
+<p>##语法##<br>JSON有三种类型的值：简单值、对象、数组</p>
+<p>1.简单值：可以在JSON中表示字符串、数组、布尔值、null。但是JSON<font color="red">不支持</font>Javascript中的特殊值<font color="red">undefined</font>。</p>
+<pre><code>//数值 
+5
+
+//字符串
+&quot;Hello world&quot; //JSON字符串必须使用双引号
+</code></pre><p>2.对象：与Javascript的对象字面量相比，JSON不同。首先，没有声明变量；其次，没有末尾的分号。</p>
+<pre><code>//javascript中对象
+var    object={
+    name:&quot;Tom&quot;,
+    age:29
+};
+
+//json的表示对象方式
+{
+    &quot;name&quot;:&quot;Tom&quot;,
+    &quot;age&quot;:29
 }
+</code></pre><p>3.数组：JSON中的数组也没有变量和分号</p>
+<pre><code>//简单的例子
+[25,&quot;hi&quot;,true]
 
-function sub(j, k){
-    console.log(j-k);
-}
-
-add(5,3); //8
-add.call(sub, 5, 3); //8
-add.apply(sub, [5, 3]); //8
-
-sub(5, 3); //2
-sub.call(add, 5, 3); //2
-sub.apply(add, [5, 3]); //2
-
-&lt;/script&gt;
-</code></pre><h2 id="通过call和apply，我们可以实现对象继承。示例："><a href="#通过call和apply，我们可以实现对象继承。示例：" class="headerlink" title="通过call和apply，我们可以实现对象继承。示例："></a>通过call和apply，我们可以实现对象继承。示例：</h2><pre><code>var Parent = function(){
-this.name = &quot;yjc&quot;;
-this.age = 22;
-}
-
-var child = {};
-console.log(child);//Object {} ,空对象
-
-Parent.call(child);
-console.log(child); //Object {name: &quot;yjc&quot;, age: 22}
-</code></pre><h2 id="call、apply有什么作用"><a href="#call、apply有什么作用" class="headerlink" title="call、apply有什么作用"></a>call、apply有什么作用</h2><p>我们经常会在我们项目中做一些通用的对象，这些对象用来处理我们的一些通用的过程。</p>
-<pre><code>/*通用验证对象*/
-var validator = {
-    validateName : function(){
-         console.log(this.name);
+//对象和数组结合
+[
+    {
+        &quot;title&quot;:&quot;Professional Javascript&quot;,
+        &quot;author&quot;:[
+                    &quot;Nichoals C. Zakas&quot;
+                ],
+        &quot;edition&quot;:3,
+        &quot;year&quot;:2011
     },
-    validateAge  : function(){
-         console.log(this.age)
+    {
+        &quot;title&quot;:&quot;Professional Javascript&quot;,
+        &quot;author&quot;:[
+                    &quot;Nichoals C. Zakas&quot;
+                ],
+        &quot;edition&quot;:2,
+        &quot;year&quot;:2009
     }
-    //.....
-}
+]
+</code></pre><h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><p>JSON对象有两个方法：<strong>stringify()</strong>和<strong>parse()</strong>。</p>
+<pre><code>JSON.stringify(obj);//把Javascript对象序列化为JSON字符串
 
-/*对象kobe*/
-var kobe = {
-    name : &apos;kobe bryant&apos;,
-    age  : -1
-}
+JSON.parse(str);//将JSON字符串转换为原生的Javascript值
+</code></pre><p><font color="red">注</font>：在序列化JS对象时，所有函数及原型成员都会被有意忽略，不体现在结果中。此外，值为undefined的任何属性也都会被跳过。</p>
+<pre><code>var book={
+    title:&quot;Professional JavaScript&quot;,
+    author:[
+        &quot;Nicholas C. Zakas&quot;
+    ],
+    edition:3,
+    year:2011，
+    print:function(){
+        console.log(this.title);
+    },
+    num:undefined
+};
 
-/*对象 allen*/ 
-var allen = {
-    name : &apos;allen iverson&apos;,
-    age  : 10
-}
+var jsonText=JSON.stringify(book);
 
-
-var isKobeAgeValid = validator.call(kobe);
-
-var isAllenAgeValid = validator.call(allen);
-</code></pre><h2 id="用处与区别"><a href="#用处与区别" class="headerlink" title="用处与区别"></a>用处与区别</h2><ol>
-<li><p>call, apply作用就是借用别人的方法来调用,就像调用自己的一样.</p>
-</li>
-<li><p>call, apply方法区别是,从第二个参数起, call方法参数将依次传递给借用的方法作参数, 而apply直接将这些参数放到一个数组中再传递, 最后借用方法的参数列表是一样的。</p>
-</li>
-</ol>
+console.log(jsonText);
+//{&quot;title&quot;:&quot;Professional JavaScript&quot;,&quot;author&quot;:[&quot;Nicholas C. Zakas&quot;],&quot;edition&quot;:3,&quot;year&quot;:2011}
+</code></pre><p><br></p>
+<pre><code>var bookCopy=JSON.parse(jsonText);
+//bookCopy和book有相同的属性，但他们是两个独立的、没有任何关系的对象。
+</code></pre><p><strong>toJSON()</strong>:可以作为函数过滤器的补充。可以给对象定义toJSON()方法，返回其自身的JSON数据格式。<br></p>
+<p><font color="red">注</font>：可以让toJSON()方法返回任何值，他都能正常工作。比如：可以让这个方法返回undefined，此时如果包含他的对象嵌入在另一个对象中，会导致它的值变成null，而如果他是顶级对象，结果就是undefined。</p>
+<p>##小结##<br> 假设把一个对象传入JSON.stringify()，序列化该对象的顺序如下：</p>
+<blockquote>
+<p>(1) 如果存在toJSON()方法而且能通过他取得有效的值，则调用该方法。否则，返回对象本身。</p>
+<p>(2) 如果提供了第二个参数，应用这个函数过滤器。传入函数过滤器的值是第（1）步返回的值。</p>
+<p>(3) 对第（2）步返回的每个值进行相应的序列化。</p>
+<p>(4) 如果提供了第三个参数，执行相应的格式化。</p>
+</blockquote>
 
       
 
@@ -370,11 +365,6 @@ var isAllenAgeValid = validator.call(allen);
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/call-apply/">call/apply</a></li></ul>
-	</div>
-
       
 
       
@@ -425,7 +415,7 @@ var isAllenAgeValid = validator.call(allen);
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://feixiaoxiaojia.github.io/2017/07/19/Call_apply区别/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://feixiaoxiaojia.github.io/2017/07/27/JSON/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -439,18 +429,18 @@ var isAllenAgeValid = validator.call(allen);
   
 <nav id="article-nav">
   
-    <a href="/2017/07/20/上线流程要点/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/07/27/JSON方法parse()/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          上线回滚流程要点
+          (no title)
         
       </div>
     </a>
   
   
-    <a href="/2017/07/19/hello-world/" id="article-nav-older" class="article-nav-link-wrap" style="float:right">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2017/07/27/JSON方法stringify()/" id="article-nav-older" class="article-nav-link-wrap" style="float:right">
+      <div class="article-nav-title"></div>
       <i class="icon-circle-right"></i>
     </a>
   
