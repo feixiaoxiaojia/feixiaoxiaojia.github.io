@@ -347,8 +347,7 @@ alert(bookCopy.releaseDate.getFullYear());
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li><p>JSON.stringify()中可接受第二个参数：这个参数可以是一个数组（指过滤数组中列出的属性）；也可以是一个过滤函数：接受两个参数属性名和值。</p>
+        <p><strong>JSON.stringify()中可接受第二个参数</strong>：这个参数可以是一个数组（指过滤数组中列出的属性）；也可以是一个过滤函数：接受两个参数属性名和值。</p>
 <pre><code>var book={
     title:&quot;Professional JavaScript&quot;,
     author:[
@@ -389,8 +388,7 @@ var jsonText=JSON.stringify(book,function(key,value){
 
 console.log(jsonText);
 //{&quot;title&quot;:&quot;Professional JavaScript&quot;,&quot;author&quot;:&quot;Nicholas C. Zakas&quot;,&quot;year&quot;:5000}
-</code></pre></li>
-<li><p>JSON.stringify()接受第三个参数：用来控制结果中的空白符和缩进符。最大缩进符为10。</p>
+</code></pre><p><strong>JSON.stringify()接受第三个参数</strong>：用来控制结果中的空白符和缩进符。最大缩进符为10。</p>
 <pre><code>var book={
     title:&quot;Professional JavaScript&quot;,
     author:[
@@ -410,7 +408,7 @@ console.log(jsonText);
 // &quot;edition&quot;: 3,
 // &quot;year&quot;: 2011
 // }&quot;
-</code></pre><p>  <br>  </p>
+</code></pre><p><br>  </p>
 <pre><code>var jsonText2=JSON.stringify(book,null,&apos;--&apos;);
 //结果：以‘--’为缩进符
 // &quot;{
@@ -421,9 +419,7 @@ console.log(jsonText);
 // --&quot;edition&quot;: 3,
 // --&quot;year&quot;: 2011
 // }&quot;
-</code></pre></li>
-</ul>
-
+</code></pre>
       
 
       
@@ -1076,10 +1072,6 @@ cancel.cancel();//即可停止计数
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">call/apply</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">Javscript高级程序设计</a>
               </li>
              
@@ -1089,6 +1081,10 @@ cancel.cancel();//即可停止计数
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)">面试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">call/apply</a>
               </li>
             
             <div class="clearfix"></div>

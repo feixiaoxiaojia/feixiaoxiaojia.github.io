@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://feixiaoxiaojia.github.io">
   <title>JSON.stringify() | Xiao jia&#39;s Daily</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JSON.stringify()中可接受第二个参数：这个参数可以是一个数组（指过滤数组中列出的属性）；也可以是一个过滤函数：接受两个参数属性名和值。 var book={     title:&amp;quot;Professional JavaScript&amp;quot;,     author:[         &amp;quot;Nicholas C. Zakas&amp;quot;     ],     edit">
+  <meta name="description" content="JSON.stringify()中可接受第二个参数：这个参数可以是一个数组（指过滤数组中列出的属性）；也可以是一个过滤函数：接受两个参数属性名和值。 var book={     title:&amp;quot;Professional JavaScript&amp;quot;,     author:[         &amp;quot;Nicholas C. Zakas&amp;quot;     ],     editi">
 <meta name="keywords" content="Javscript高级程序设计">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JSON.stringify()">
 <meta property="og:url" content="http://feixiaoxiaojia.github.io/2017/07/27/JSON方法stringify()/index.html">
 <meta property="og:site_name" content="Xiao jia&#39;s Daily">
-<meta property="og:description" content="JSON.stringify()中可接受第二个参数：这个参数可以是一个数组（指过滤数组中列出的属性）；也可以是一个过滤函数：接受两个参数属性名和值。 var book={     title:&amp;quot;Professional JavaScript&amp;quot;,     author:[         &amp;quot;Nicholas C. Zakas&amp;quot;     ],     edit">
-<meta property="og:updated_time" content="2017-07-27T04:33:48.943Z">
+<meta property="og:description" content="JSON.stringify()中可接受第二个参数：这个参数可以是一个数组（指过滤数组中列出的属性）；也可以是一个过滤函数：接受两个参数属性名和值。 var book={     title:&amp;quot;Professional JavaScript&amp;quot;,     author:[         &amp;quot;Nicholas C. Zakas&amp;quot;     ],     editi">
+<meta property="og:updated_time" content="2017-07-27T04:40:33.747Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JSON.stringify()">
-<meta name="twitter:description" content="JSON.stringify()中可接受第二个参数：这个参数可以是一个数组（指过滤数组中列出的属性）；也可以是一个过滤函数：接受两个参数属性名和值。 var book={     title:&amp;quot;Professional JavaScript&amp;quot;,     author:[         &amp;quot;Nicholas C. Zakas&amp;quot;     ],     edit">
+<meta name="twitter:description" content="JSON.stringify()中可接受第二个参数：这个参数可以是一个数组（指过滤数组中列出的属性）；也可以是一个过滤函数：接受两个参数属性名和值。 var book={     title:&amp;quot;Professional JavaScript&amp;quot;,     author:[         &amp;quot;Nicholas C. Zakas&amp;quot;     ],     editi">
   
     <link rel="alternative" href="/atom.xml" title="Xiao jia&#39;s Daily" type="application/atom+xml">
   
@@ -271,8 +271,7 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li><p>JSON.stringify()中可接受第二个参数：这个参数可以是一个数组（指过滤数组中列出的属性）；也可以是一个过滤函数：接受两个参数属性名和值。</p>
+        <p><strong>JSON.stringify()中可接受第二个参数</strong>：这个参数可以是一个数组（指过滤数组中列出的属性）；也可以是一个过滤函数：接受两个参数属性名和值。</p>
 <pre><code>var book={
     title:&quot;Professional JavaScript&quot;,
     author:[
@@ -313,8 +312,7 @@ var jsonText=JSON.stringify(book,function(key,value){
 
 console.log(jsonText);
 //{&quot;title&quot;:&quot;Professional JavaScript&quot;,&quot;author&quot;:&quot;Nicholas C. Zakas&quot;,&quot;year&quot;:5000}
-</code></pre></li>
-<li><p>JSON.stringify()接受第三个参数：用来控制结果中的空白符和缩进符。最大缩进符为10。</p>
+</code></pre><p><strong>JSON.stringify()接受第三个参数</strong>：用来控制结果中的空白符和缩进符。最大缩进符为10。</p>
 <pre><code>var book={
     title:&quot;Professional JavaScript&quot;,
     author:[
@@ -334,7 +332,7 @@ console.log(jsonText);
 // &quot;edition&quot;: 3,
 // &quot;year&quot;: 2011
 // }&quot;
-</code></pre><p>  <br>  </p>
+</code></pre><p><br>  </p>
 <pre><code>var jsonText2=JSON.stringify(book,null,&apos;--&apos;);
 //结果：以‘--’为缩进符
 // &quot;{
@@ -345,9 +343,7 @@ console.log(jsonText);
 // --&quot;edition&quot;: 3,
 // --&quot;year&quot;: 2011
 // }&quot;
-</code></pre></li>
-</ul>
-
+</code></pre>
       
 
       
@@ -525,10 +521,6 @@ console.log(jsonText);
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">call/apply</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">Javscript高级程序设计</a>
               </li>
              
@@ -538,6 +530,10 @@ console.log(jsonText);
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)">面试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">call/apply</a>
               </li>
             
             <div class="clearfix"></div>
