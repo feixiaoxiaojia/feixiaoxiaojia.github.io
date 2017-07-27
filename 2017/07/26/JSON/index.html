@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://feixiaoxiaojia.github.io">
-  <title>JS中的计时器方法 | Xiao jia&#39;s Daily</title>
+  <title>JSON基础知识学习 | Xiao jia&#39;s Daily</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题目描述实现一个打点计时器，要求 1、从 start 到 end（包含 start 和 end），每隔 100 毫秒 console.log 一个数字，每次数字增幅为 1 2、返回的对象中需要包含一个 cancel 方法，用于停止定时操作3、第一个数需要立即输出 思路 方法描述setInterval周期性的调用一个函数(function)或者执行一段代码clearInterval取消调用setIn">
-<meta name="keywords" content="腾讯课堂笔试题">
+  <meta name="description" content="JSON是一种数据格式，不是一种编程语言。也是Javascript的一种内置对象。 ##语法##JSON有三种类型的值：简单值、对象、数组 1.简单值：可以在JSON中表示字符串、数组、布尔值、null。但是JSON不支持Javascript中的特殊值undefined。 //数值  5  //字符串 &amp;quot;Hello world&amp;quot; //JSON字符串必须使用双引号 2.对象：与J">
+<meta name="keywords" content="Javscript高级程序设计">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS中的计时器方法">
-<meta property="og:url" content="http://feixiaoxiaojia.github.io/2017/07/16/countClock/index.html">
+<meta property="og:title" content="JSON基础知识学习">
+<meta property="og:url" content="http://feixiaoxiaojia.github.io/2017/07/26/JSON/index.html">
 <meta property="og:site_name" content="Xiao jia&#39;s Daily">
-<meta property="og:description" content="题目描述实现一个打点计时器，要求 1、从 start 到 end（包含 start 和 end），每隔 100 毫秒 console.log 一个数字，每次数字增幅为 1 2、返回的对象中需要包含一个 cancel 方法，用于停止定时操作3、第一个数需要立即输出 思路 方法描述setInterval周期性的调用一个函数(function)或者执行一段代码clearInterval取消调用setIn">
-<meta property="og:updated_time" content="2017-07-19T04:30:26.507Z">
+<meta property="og:description" content="JSON是一种数据格式，不是一种编程语言。也是Javascript的一种内置对象。 ##语法##JSON有三种类型的值：简单值、对象、数组 1.简单值：可以在JSON中表示字符串、数组、布尔值、null。但是JSON不支持Javascript中的特殊值undefined。 //数值  5  //字符串 &amp;quot;Hello world&amp;quot; //JSON字符串必须使用双引号 2.对象：与J">
+<meta property="og:updated_time" content="2017-07-27T04:33:53.464Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS中的计时器方法">
-<meta name="twitter:description" content="题目描述实现一个打点计时器，要求 1、从 start 到 end（包含 start 和 end），每隔 100 毫秒 console.log 一个数字，每次数字增幅为 1 2、返回的对象中需要包含一个 cancel 方法，用于停止定时操作3、第一个数需要立即输出 思路 方法描述setInterval周期性的调用一个函数(function)或者执行一段代码clearInterval取消调用setIn">
+<meta name="twitter:title" content="JSON基础知识学习">
+<meta name="twitter:description" content="JSON是一种数据格式，不是一种编程语言。也是Javascript的一种内置对象。 ##语法##JSON有三种类型的值：简单值、对象、数组 1.简单值：可以在JSON中表示字符串、数组、布尔值、null。但是JSON不支持Javascript中的特殊值undefined。 //数值  5  //字符串 &amp;quot;Hello world&amp;quot; //JSON字符串必须使用双引号 2.对象：与J">
   
     <link rel="alternative" href="/atom.xml" title="Xiao jia&#39;s Daily" type="application/atom+xml">
   
@@ -253,76 +253,102 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-countClock" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JSON" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      JS中的计时器方法
+      JSON基础知识学习
     </h1>
   
 
-        <a href="/2017/07/16/countClock/" class="archive-article-date">
-  	<time datetime="2017-07-16T10:02:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-16</time>
+        <a href="/2017/07/26/JSON/" class="archive-article-date">
+  	<time datetime="2017-07-26T10:12:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-26</time>
 </a>
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>实现一个打点计时器，要求 <br><br>1、从 start 到 end（包含 start 和 end），每隔 100 毫秒 console.log 一个数字，每次数字增幅为 1 <br><br>2、返回的对象中需要包含一个 cancel 方法，用于停止定时操作<br><br>3、第一个数需要立即输出<br></p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><blockquote>
-<table table="" cellspacing="0" style="border:1px solid #e6e6e6;text-align:left"><tr><th>方法</th><th>描述</th></tr><tr><td>setInterval</td><td>周期性的调用一个函数(function)或者执行一段代码</td></tr><tr><td>clearInterval</td><td>取消调用setInterval设置的重复执行动作</td></tr><tr><td>setTimeout</td><td>在指定的延迟时间之后调用一个函数(function)或者执行一段代码片段</td></tr><tr><td>clearTimeout</td><td>方法可取消由setTimeout方法设置的timeout</td></tr></table>
+        <p>JSON是一种数据格式，不是一种编程语言。也是Javascript的一种内置对象。</p>
+<p>##语法##<br>JSON有三种类型的值：简单值、对象、数组</p>
+<p>1.简单值：可以在JSON中表示字符串、数组、布尔值、null。但是JSON<font color="red">不支持</font>Javascript中的特殊值<font color="red">undefined</font>。</p>
+<pre><code>//数值 
+5
 
-</blockquote>
-<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a><br>例子</h3><pre><code>var id=setInterval(function(){    
-    consoel.log(&quot;log&quot;)
-},1000)
+//字符串
+&quot;Hello world&quot; //JSON字符串必须使用双引号
+</code></pre><p>2.对象：与Javascript的对象字面量相比，JSON不同。首先，没有声明变量；其次，没有末尾的分号。</p>
+<pre><code>//javascript中对象
+var    object={
+    name:&quot;Tom&quot;,
+    age:29
+};
 
-clearInterval(id);
-</code></pre><p> <br></p>
-<pre><code>var id=setTimeout(function() {
-alert(&quot;Hello World!&quot;);
-}, 500);
-
-clearTimeout(id);
-</code></pre><p><font color="red">提示：</font>setTimeout()止执行一次code。如果要多次调用，可以使用setInterval()或者让code自身再次调用setTimeout().</p>
-<h2 id="解题方法"><a href="#解题方法" class="headerlink" title="解题方法"></a>解题方法</h2><h3 id="setInterval方法"><a href="#setInterval方法" class="headerlink" title="setInterval方法"></a>setInterval方法</h3><pre><code>function count(start, end) {
-    console.log(start);
-    var id=setInterval(function(){
-        if(start&lt;end){
-            console.log(++start);
-        }
-    },100);
-    return {
-        cancel:function(){
-            clearInterval(id);
-        } 
-    }    
+//json的表示对象方式
+{
+    &quot;name&quot;:&quot;Tom&quot;,
+    &quot;age&quot;:29
 }
+</code></pre><p>3.数组：JSON中的数组也没有变量和分号</p>
+<pre><code>//简单的例子
+[25,&quot;hi&quot;,true]
 
-//测试调用
-var cancel=count(1,1000);
-cancel.cancel();//即可停止计数
-</code></pre><h3 id="setTimeout方法"><a href="#setTimeout方法" class="headerlink" title="setTimeout方法"></a>setTimeout方法</h3><pre><code>function count(start,end){    
-    if(start&lt;=end){
-        console.log(start++);
-        id=setTimeout(function(){
-            count(start,end);
-        },100);
+//对象和数组结合
+[
+    {
+        &quot;title&quot;:&quot;Professional Javascript&quot;,
+        &quot;author&quot;:[
+                    &quot;Nichoals C. Zakas&quot;
+                ],
+        &quot;edition&quot;:3,
+        &quot;year&quot;:2011
+    },
+    {
+        &quot;title&quot;:&quot;Professional Javascript&quot;,
+        &quot;author&quot;:[
+                    &quot;Nichoals C. Zakas&quot;
+                ],
+        &quot;edition&quot;:2,
+        &quot;year&quot;:2009
     }
-    return {
-        cancel:function(){
-            clearTimeout(id);
-        } 
-    }     
-}
+]
+</code></pre><h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><p>JSON对象有两个方法：<strong>stringify()</strong>和<strong>parse()</strong>。</p>
+<pre><code>JSON.stringify(obj);//把Javascript对象序列化为JSON字符串
 
-//测试调用
-var cancel=count(1,1000);
-cancel.cancel();//即可停止计数
-</code></pre>
+JSON.parse(str);//将JSON字符串转换为原生的Javascript值
+</code></pre><p><font color="red">注</font>：在序列化JS对象时，所有函数及原型成员都会被有意忽略，不体现在结果中。此外，值为undefined的任何属性也都会被跳过。</p>
+<pre><code>var book={
+    title:&quot;Professional JavaScript&quot;,
+    author:[
+        &quot;Nicholas C. Zakas&quot;
+    ],
+    edition:3,
+    year:2011，
+    print:function(){
+        console.log(this.title);
+    },
+    num:undefined
+};
+
+var jsonText=JSON.stringify(book);
+
+console.log(jsonText);
+//{&quot;title&quot;:&quot;Professional JavaScript&quot;,&quot;author&quot;:[&quot;Nicholas C. Zakas&quot;],&quot;edition&quot;:3,&quot;year&quot;:2011}
+</code></pre><p><br></p>
+<pre><code>var bookCopy=JSON.parse(jsonText);
+//bookCopy和book有相同的属性，但他们是两个独立的、没有任何关系的对象。
+</code></pre><p><strong>toJSON()</strong>:可以作为函数过滤器的补充。可以给对象定义toJSON()方法，返回其自身的JSON数据格式。<br></p>
+<p><font color="red">注</font>：可以让toJSON()方法返回任何值，他都能正常工作。比如：可以让这个方法返回undefined，此时如果包含他的对象嵌入在另一个对象中，会导致它的值变成null，而如果他是顶级对象，结果就是undefined。</p>
+<p>##小结##<br> 假设把一个对象传入JSON.stringify()，序列化该对象的顺序如下：</p>
+<blockquote>
+<p>(1) 如果存在toJSON()方法而且能通过他取得有效的值，则调用该方法。否则，返回对象本身。</p>
+<p>(2) 如果提供了第二个参数，应用这个函数过滤器。传入函数过滤器的值是第（1）步返回的值。</p>
+<p>(3) 对第（2）步返回的每个值进行相应的序列化。</p>
+<p>(4) 如果提供了第三个参数，执行相应的格式化。</p>
+</blockquote>
+
       
 
       
@@ -353,7 +379,7 @@ cancel.cancel();//即可停止计数
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/腾讯课堂笔试题/">腾讯课堂笔试题</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javscript高级程序设计/">Javscript高级程序设计</a></li></ul>
 	</div>
 
       
@@ -406,7 +432,7 @@ cancel.cancel();//即可停止计数
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://feixiaoxiaojia.github.io/2017/07/16/countClock/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://feixiaoxiaojia.github.io/2017/07/26/JSON/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -420,15 +446,20 @@ cancel.cancel();//即可停止计数
   
 <nav id="article-nav">
   
-    <a href="/2017/07/19/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/07/27/JSON方法stringify()/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Hello World
+          JSON.stringify()
         
       </div>
     </a>
   
+  
+    <a href="/2017/07/20/linux基本命令/" id="article-nav-older" class="article-nav-link-wrap" style="float:right">
+      <div class="article-nav-title">部分linux基本命令</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

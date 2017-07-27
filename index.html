@@ -256,11 +256,22 @@ var _hmt = _hmt || [];
     <article id="post-JSON方法parse()" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/27/JSON方法parse()/">JSON.parse()</a>
+    </h1>
+  
+
+        <a href="/2017/07/27/JSON方法parse()/" class="archive-article-date">
+  	<time datetime="2017-07-27T03:55:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-27</time>
+</a>
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>title:JSON.parse()<br>date:7/27/2017 11:55:00 AM </p>
-<h2 id="tags-Javscript高级程序设计"><a href="#tags-Javscript高级程序设计" class="headerlink" title="tags:Javscript高级程序设计"></a>tags:Javscript高级程序设计</h2><p>JSON.parse()接收第二个参数，该参数是个函数（函数的参数分别是属性名和值，而且都需要返回一个值）。如果返回值是undefined，则表示要从结果中删除相应的键；如果返回其他值，则将该值插入到结果中。</p>
+        <p>JSON.parse()接收第二个参数，该参数是个函数（函数的参数分别是属性名和值，而且都需要返回一个值）。如果返回值是undefined，则表示要从结果中删除相应的键；如果返回其他值，则将该值插入到结果中。</p>
 <pre><code>var book={
     title:&quot;Professional JavaScript&quot;,
     author:[
@@ -291,6 +302,11 @@ alert(bookCopy.releaseDate.getFullYear());
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javscript高级程序设计/">Javscript高级程序设计</a></li></ul>
+	</div>
+
       
 
       
@@ -313,14 +329,154 @@ alert(bookCopy.releaseDate.getFullYear());
 
 
   
-    <article id="post-JSON" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JSON方法stringify()" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/27/JSON方法stringify()/">JSON.stringify()</a>
+    </h1>
+  
+
+        <a href="/2017/07/27/JSON方法stringify()/" class="archive-article-date">
+  	<time datetime="2017-07-27T03:55:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-27</time>
+</a>
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>title:JSON基础知识学习<br>date:7/26/2017 6:12:37 PM</p>
-<h2 id="tags-Javscript高级程序设计"><a href="#tags-Javscript高级程序设计" class="headerlink" title="tags:Javscript高级程序设计"></a>tags:Javscript高级程序设计</h2><p>JSON是一种数据格式，不是一种编程语言。也是Javascript的一种内置对象。</p>
+        <ul>
+<li><p>JSON.stringify()中可接受第二个参数：这个参数可以是一个数组（指过滤数组中列出的属性）；也可以是一个过滤函数：接受两个参数属性名和值。</p>
+<pre><code>var book={
+    title:&quot;Professional JavaScript&quot;,
+    author:[
+        &quot;Nicholas C. Zakas&quot;
+    ],
+    edition:3,
+    year:2011,
+    print:function(){
+        console.log(this.title);
+    },
+    num:undefined
+};
+</code></pre><p><br></p>
+<pre><code>var jsonText=JSON.stringify(book);
+console.log(jsonText);
+//{&quot;title&quot;:&quot;Professional JavaScript&quot;,&quot;author&quot;:[&quot;Nicholas C. Zakas&quot;],&quot;edition&quot;:3,&quot;year&quot;:2011}
+</code></pre><p><br></p>
+<pre><code>//数组
+var jsonTextPart=JSON.stringify(book,[&quot;title&quot;,&quot;author&quot;]);
+//{&quot;title&quot;:&quot;Professional JavaScript&quot;,&quot;author&quot;:[&quot;Nicholas C. Zakas&quot;]}
+</code></pre><p><br></p>
+<pre><code>//函数
+var jsonText=JSON.stringify(book,function(key,value){
+    switch(key){
+        case &quot;author&quot;:
+        return value.join(&apos;,&apos;);
+
+        case &quot;edition&quot;:
+        return undefined;
+
+        case &quot;year&quot;:
+        return 5000;
+
+        default:
+        return value;
+    }
+});
+
+console.log(jsonText);
+//{&quot;title&quot;:&quot;Professional JavaScript&quot;,&quot;author&quot;:&quot;Nicholas C. Zakas&quot;,&quot;year&quot;:5000}
+</code></pre></li>
+<li><p>JSON.stringify()接受第三个参数：用来控制结果中的空白符和缩进符。最大缩进符为10。</p>
+<pre><code>var book={
+    title:&quot;Professional JavaScript&quot;,
+    author:[
+        &quot;Nicholas C. Zakas&quot;
+    ],
+    edition:3,
+    year:2011
+};
+</code></pre><p><br>  </p>
+<pre><code>var jsonText=JSON.stringify(book,null,4);
+//结果：每个级别缩进4个空格
+// &quot;{
+// &quot;title&quot;: &quot;Professional JavaScript&quot;,
+// &quot;author&quot;: [
+// &quot;Nicholas C. Zakas&quot;
+// ],
+// &quot;edition&quot;: 3,
+// &quot;year&quot;: 2011
+// }&quot;
+</code></pre><p>  <br>  </p>
+<pre><code>var jsonText2=JSON.stringify(book,null,&apos;--&apos;);
+//结果：以‘--’为缩进符
+// &quot;{
+// --&quot;title&quot;: &quot;Professional JavaScript&quot;,
+// --&quot;author&quot;: [
+// ----&quot;Nicholas C. Zakas&quot;
+// --],
+// --&quot;edition&quot;: 3,
+// --&quot;year&quot;: 2011
+// }&quot;
+</code></pre></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javscript高级程序设计/">Javscript高级程序设计</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/27/JSON方法stringify()/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-JSON" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/26/JSON/">JSON基础知识学习</a>
+    </h1>
+  
+
+        <a href="/2017/07/26/JSON/" class="archive-article-date">
+  	<time datetime="2017-07-26T10:12:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-26</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>JSON是一种数据格式，不是一种编程语言。也是Javascript的一种内置对象。</p>
 <p>##语法##<br>JSON有三种类型的值：简单值、对象、数组</p>
 <p>1.简单值：可以在JSON中表示字符串、数组、布尔值、null。但是JSON<font color="red">不支持</font>Javascript中的特殊值<font color="red">undefined</font>。</p>
 <pre><code>//数值 
@@ -405,124 +561,16 @@ console.log(jsonText);
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javscript高级程序设计/">Javscript高级程序设计</a></li></ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/27/JSON/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-JSON方法stringify()" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>title:JSON.stringify()<br>date:7/27/2017 11:55:00 AM </p>
-<h2 id="tags-Javscript高级程序设计"><a href="#tags-Javscript高级程序设计" class="headerlink" title="tags:Javscript高级程序设计"></a>tags:Javscript高级程序设计</h2><ul>
-<li><p>JSON.stringify()中可接受第二个参数：这个参数可以是一个数组（指过滤数组中列出的属性）；也可以是一个过滤函数：接受两个参数属性名和值。</p>
-<pre><code>var book={
-    title:&quot;Professional JavaScript&quot;,
-    author:[
-        &quot;Nicholas C. Zakas&quot;
-    ],
-    edition:3,
-    year:2011,
-    print:function(){
-        console.log(this.title);
-    },
-    num:undefined
-};
-</code></pre><p><br></p>
-<pre><code>var jsonText=JSON.stringify(book);
-console.log(jsonText);
-//{&quot;title&quot;:&quot;Professional JavaScript&quot;,&quot;author&quot;:[&quot;Nicholas C. Zakas&quot;],&quot;edition&quot;:3,&quot;year&quot;:2011}
-</code></pre><p><br></p>
-<pre><code>//数组
-var jsonTextPart=JSON.stringify(book,[&quot;title&quot;,&quot;author&quot;]);
-//{&quot;title&quot;:&quot;Professional JavaScript&quot;,&quot;author&quot;:[&quot;Nicholas C. Zakas&quot;]}
-</code></pre><p><br></p>
-<pre><code>//函数
-var jsonText=JSON.stringify(book,function(key,value){
-    switch(key){
-        case &quot;author&quot;:
-        return value.join(&apos;,&apos;);
-
-        case &quot;edition&quot;:
-        return undefined;
-
-        case &quot;year&quot;:
-        return 5000;
-
-        default:
-        return value;
-    }
-});
-
-console.log(jsonText);
-//{&quot;title&quot;:&quot;Professional JavaScript&quot;,&quot;author&quot;:&quot;Nicholas C. Zakas&quot;,&quot;year&quot;:5000}
-</code></pre></li>
-<li><p>JSON.stringify()接受第三个参数：用来控制结果中的空白符和缩进符。最大缩进符为10。</p>
-<pre><code>var book={
-    title:&quot;Professional JavaScript&quot;,
-    author:[
-        &quot;Nicholas C. Zakas&quot;
-    ],
-    edition:3,
-    year:2011
-};
-</code></pre><p><br>  </p>
-<pre><code>var jsonText=JSON.stringify(book,null,4);
-//结果：每个级别缩进4个空格
-// &quot;{
-// &quot;title&quot;: &quot;Professional JavaScript&quot;,
-// &quot;author&quot;: [
-// &quot;Nicholas C. Zakas&quot;
-// ],
-// &quot;edition&quot;: 3,
-// &quot;year&quot;: 2011
-// }&quot;
-</code></pre><p>  <br>  </p>
-<pre><code>var jsonText2=JSON.stringify(book,null,&apos;--&apos;);
-//结果：以‘--’为缩进符
-// &quot;{
-// --&quot;title&quot;: &quot;Professional JavaScript&quot;,
-// --&quot;author&quot;: [
-// ----&quot;Nicholas C. Zakas&quot;
-// --],
-// --&quot;edition&quot;: 3,
-// --&quot;year&quot;: 2011
-// }&quot;
-</code></pre></li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/27/JSON方法stringify()/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/07/26/JSON/">展开全文 >></a>
         </p>
       
 
@@ -1032,11 +1080,15 @@ cancel.cancel();//即可停止计数
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">面试</a>
+                <a href="javascript:void(0)">Javscript高级程序设计</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)">腾讯课堂笔试题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">面试</a>
               </li>
             
             <div class="clearfix"></div>

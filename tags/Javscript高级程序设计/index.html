@@ -6,19 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://feixiaoxiaojia.github.io">
-  <title>JS中的计时器方法 | Xiao jia&#39;s Daily</title>
+  <title>Tag: Javscript高级程序设计 | Xiao jia&#39;s Daily</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题目描述实现一个打点计时器，要求 1、从 start 到 end（包含 start 和 end），每隔 100 毫秒 console.log 一个数字，每次数字增幅为 1 2、返回的对象中需要包含一个 cancel 方法，用于停止定时操作3、第一个数需要立即输出 思路 方法描述setInterval周期性的调用一个函数(function)或者执行一段代码clearInterval取消调用setIn">
-<meta name="keywords" content="腾讯课堂笔试题">
-<meta property="og:type" content="article">
-<meta property="og:title" content="JS中的计时器方法">
-<meta property="og:url" content="http://feixiaoxiaojia.github.io/2017/07/16/countClock/index.html">
+  <meta name="description" content="欢迎来到我的个人站~">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Xiao jia&#39;s Daily">
+<meta property="og:url" content="http://feixiaoxiaojia.github.io/tags/Javscript高级程序设计/index.html">
 <meta property="og:site_name" content="Xiao jia&#39;s Daily">
-<meta property="og:description" content="题目描述实现一个打点计时器，要求 1、从 start 到 end（包含 start 和 end），每隔 100 毫秒 console.log 一个数字，每次数字增幅为 1 2、返回的对象中需要包含一个 cancel 方法，用于停止定时操作3、第一个数需要立即输出 思路 方法描述setInterval周期性的调用一个函数(function)或者执行一段代码clearInterval取消调用setIn">
-<meta property="og:updated_time" content="2017-07-19T04:30:26.507Z">
+<meta property="og:description" content="欢迎来到我的个人站~">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS中的计时器方法">
-<meta name="twitter:description" content="题目描述实现一个打点计时器，要求 1、从 start 到 end（包含 start 和 end），每隔 100 毫秒 console.log 一个数字，每次数字增幅为 1 2、返回的对象中需要包含一个 cancel 方法，用于停止定时操作3、第一个数需要立即输出 思路 方法描述setInterval周期性的调用一个函数(function)或者执行一段代码clearInterval取消调用setIn">
+<meta name="twitter:title" content="Xiao jia&#39;s Daily">
+<meta name="twitter:description" content="欢迎来到我的个人站~">
   
     <link rel="alternative" href="/atom.xml" title="Xiao jia&#39;s Daily" type="application/atom+xml">
   
@@ -253,191 +251,118 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-countClock" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      JS中的计时器方法
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/07/27/JSON方法parse()/" class="archive-article-date">
+  	<time datetime="2017-07-27T03:55:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-27</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/07/27/JSON方法parse()/">JSON.parse()</a>
     </h1>
   
 
-        <a href="/2017/07/16/countClock/" class="archive-article-date">
-  	<time datetime="2017-07-16T10:02:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-16</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>实现一个打点计时器，要求 <br><br>1、从 start 到 end（包含 start 和 end），每隔 100 毫秒 console.log 一个数字，每次数字增幅为 1 <br><br>2、返回的对象中需要包含一个 cancel 方法，用于停止定时操作<br><br>3、第一个数需要立即输出<br></p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><blockquote>
-<table table="" cellspacing="0" style="border:1px solid #e6e6e6;text-align:left"><tr><th>方法</th><th>描述</th></tr><tr><td>setInterval</td><td>周期性的调用一个函数(function)或者执行一段代码</td></tr><tr><td>clearInterval</td><td>取消调用setInterval设置的重复执行动作</td></tr><tr><td>setTimeout</td><td>在指定的延迟时间之后调用一个函数(function)或者执行一段代码片段</td></tr><tr><td>clearTimeout</td><td>方法可取消由setTimeout方法设置的timeout</td></tr></table>
-
-</blockquote>
-<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a><br>例子</h3><pre><code>var id=setInterval(function(){    
-    consoel.log(&quot;log&quot;)
-},1000)
-
-clearInterval(id);
-</code></pre><p> <br></p>
-<pre><code>var id=setTimeout(function() {
-alert(&quot;Hello World!&quot;);
-}, 500);
-
-clearTimeout(id);
-</code></pre><p><font color="red">提示：</font>setTimeout()止执行一次code。如果要多次调用，可以使用setInterval()或者让code自身再次调用setTimeout().</p>
-<h2 id="解题方法"><a href="#解题方法" class="headerlink" title="解题方法"></a>解题方法</h2><h3 id="setInterval方法"><a href="#setInterval方法" class="headerlink" title="setInterval方法"></a>setInterval方法</h3><pre><code>function count(start, end) {
-    console.log(start);
-    var id=setInterval(function(){
-        if(start&lt;end){
-            console.log(++start);
-        }
-    },100);
-    return {
-        cancel:function(){
-            clearInterval(id);
-        } 
-    }    
-}
-
-//测试调用
-var cancel=count(1,1000);
-cancel.cancel();//即可停止计数
-</code></pre><h3 id="setTimeout方法"><a href="#setTimeout方法" class="headerlink" title="setTimeout方法"></a>setTimeout方法</h3><pre><code>function count(start,end){    
-    if(start&lt;=end){
-        console.log(start++);
-        id=setTimeout(function(){
-            count(start,end);
-        },100);
-    }
-    return {
-        cancel:function(){
-            clearTimeout(id);
-        } 
-    }     
-}
-
-//测试调用
-var cancel=count(1,1000);
-cancel.cancel();//即可停止计数
-</code></pre>
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/腾讯课堂笔试题/">腾讯课堂笔试题</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javscript高级程序设计/">Javscript高级程序设计</a></li></ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <!--<a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="github share-sns" href="javascript:;" data-type="github">
-            <i class="icon icon-github"></i>
-          </a>
-          <a class="zhihu share-sns" href="javascript:;" data-type="zhihu">
-            <i class="icon icon-zhihu"></i>
-          </a>-->
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://feixiaoxiaojia.github.io/2017/07/16/countClock/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
   
-<nav id="article-nav">
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/07/27/JSON方法stringify()/" class="archive-article-date">
+  	<time datetime="2017-07-27T03:55:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-27</time>
+</a>
+        </div>
+    	 
   
-    <a href="/2017/07/19/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Hello World
-        
-      </div>
-    </a>
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/07/27/JSON方法stringify()/">JSON.stringify()</a>
+    </h1>
+  
+
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javscript高级程序设计/">Javscript高级程序设计</a></li></ul>
+	</div>
+
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/07/26/JSON/" class="archive-article-date">
+  	<time datetime="2017-07-26T10:12:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-26</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/07/26/JSON/">JSON基础知识学习</a>
+    </h1>
+  
+
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javscript高级程序设计/">Javscript高级程序设计</a></li></ul>
+	</div>
+
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
   
   
-</nav>
+    </div></section>
+  
 
-
-
-
-
-
-
+    
 
 
           </div>
@@ -464,9 +389,9 @@ cancel.cancel();//即可停止计数
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
