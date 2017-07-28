@@ -256,12 +256,22 @@ var _hmt = _hmt || [];
     <article id="post-Ajax和跨域" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/28/Ajax和跨域/">Ajax和跨域</a>
+    </h1>
+  
+
+        <a href="/2017/07/28/Ajax和跨域/" class="archive-article-date">
+  	<time datetime="2017-07-28T09:17:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-28</time>
+</a>
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>title:Ajax和跨域<br>date:7/28/2017 5:17:57 PM </p>
-<h2 id="tags-Javscript高级程序设计-前端跨域"><a href="#tags-Javscript高级程序设计-前端跨域" class="headerlink" title="tags:Javscript高级程序设计,前端跨域 "></a>tags:Javscript高级程序设计,前端跨域 </h2><p>###1.考虑兼容IE7之前的浏览器，创建XHR对象###</p>
-<pre><code>function createXHR(){
+        <h3 id="1-考虑兼容IE7之前的浏览器，创建XHR对象"><a href="#1-考虑兼容IE7之前的浏览器，创建XHR对象" class="headerlink" title="1.考虑兼容IE7之前的浏览器，创建XHR对象"></a>1.考虑兼容IE7之前的浏览器，创建XHR对象</h3><pre><code>function createXHR(){
     if(typeof XMLHttpRequest!=&quot;undefined&quot;){
         return new XMLHttpRequest();
     }else if(typeof ActiveXObject!=&quot;undefined&quot;){
@@ -309,7 +319,7 @@ xhr.onreadyStateChange=function(){
 };
 xhr.open(&quot;get&quot;,&quot;example.txt&quot;,true);
 xhr.send(null);
-</code></pre><p>###2.跨浏览器的CORS###<br>CORS的基本思想是，使用自定义的HTTP头部让浏览器与服务器进行沟通，从而决定请求或响应是应该成功，还是应该失败。</p>
+</code></pre><h3 id="2-跨浏览器的CORS"><a href="#2-跨浏览器的CORS" class="headerlink" title="2.跨浏览器的CORS"></a>2.跨浏览器的CORS</h3><p>CORS的基本思想是，使用自定义的HTTP头部让浏览器与服务器进行沟通，从而决定请求或响应是应该成功，还是应该失败。</p>
 <pre><code>//考虑兼容性    
 function createCORSRequest(method,url){
     var xhr=new XMLHttpRequest();
@@ -333,7 +343,7 @@ if(request){
     };
     request.send(null);
 }
-</code></pre><p>###3.JSONP实现跨域###<br>JSONP由两部分构成：回调函数和数据。回调函数,是当响应到来时，应该在页面中调用的函数<br>。数据，是传入回调函数中的JSON数据。</p>
+</code></pre><h3 id="3-JSONP实现跨域"><a href="#3-JSONP实现跨域" class="headerlink" title="3.JSONP实现跨域"></a>3.JSONP实现跨域</h3><p>JSONP由两部分构成：回调函数和数据。回调函数,是当响应到来时，应该在页面中调用的函数<br>。数据，是传入回调函数中的JSON数据。</p>
 <pre><code>function handleResponse(response){
     alert(&quot;You&apos;re at IP address &quot;+response.ip+&quot;, which is in &quot;+response.city+&quot;, &quot;+response.region_name);
 }
@@ -341,8 +351,7 @@ if(request){
 var script=document.createElement(&quot;script&quot;);
 script.src=&quot;http://freegeoip.net/json/?callback=handleResponse&quot;;
 document.body.insertBefore(script,document.body.firstChild);
-</code></pre><p>###4.ajax和jsonp实现跨域的区别###</p>
-<p>（1） ajax和jsonp这两种技术在调用方式上“看起来”很像，目的也一样，都是请求一个url，然后把服务器返回的数据进行处理，因此jquery和ext等框架都把jsonp作为ajax的一种形式进行了封装；<br><br>（2）但ajax和jsonp其实本质上是不同的东西。ajax的核心是通过XmlHttpRequest获取非本页内容，使用XHR(XDR)对象并在open()方法中传入绝对URL；而jsonp的核心则是通过动态&lt;script&gt;元素来使用的，使用时可以为src属性指定一个跨域URL。</p>
+</code></pre><h3 id="4-ajax和jsonp实现跨域的区别"><a href="#4-ajax和jsonp实现跨域的区别" class="headerlink" title="4.ajax和jsonp实现跨域的区别"></a>4.ajax和jsonp实现跨域的区别</h3><p>（1） ajax和jsonp这两种技术在调用方式上“看起来”很像，目的也一样，都是请求一个url，然后把服务器返回的数据进行处理，因此jquery和ext等框架都把jsonp作为ajax的一种形式进行了封装；<br><br>（2）但ajax和jsonp其实本质上是不同的东西。ajax的核心是通过XmlHttpRequest获取非本页内容，使用XHR(XDR)对象并在open()方法中传入绝对URL；而jsonp的核心则是通过动态&lt;script&gt;元素来使用的，使用时可以为src属性指定一个跨域URL。</p>
 <p>参考博文：<a href="https://cwjinterview.github.io/2017/04/23/%E6%89%8B%E5%86%99ajax/" title="javascript_Ajax" target="_blank" rel="external">https://cwjinterview.github.io/2017/04/23/%E6%89%8B%E5%86%99ajax/</a><br><a href="http://www.cnblogs.com/Darren_code/p/cors.html" title="AJAX POST&amp;跨域 解决方案 - CORS" target="_blank" rel="external">http://www.cnblogs.com/Darren_code/p/cors.html</a></p>
 
       
@@ -352,6 +361,11 @@ document.body.insertBefore(script,document.body.firstChild);
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javscript高级程序设计/">Javscript高级程序设计</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端跨域/">前端跨域</a></li></ul>
+	</div>
+
       
 
       
@@ -1202,6 +1216,10 @@ cancel.cancel();//即可停止计数
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)">腾讯课堂笔试题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">前端跨域</a>
               </li>
              
               <li class="article-tag-list-item">
