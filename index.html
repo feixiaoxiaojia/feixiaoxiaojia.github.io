@@ -253,6 +253,127 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Ajax和跨域" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>title:Ajax和跨域<br>date:7/28/2017 5:17:57 PM </p>
+<h2 id="tags-Javscript高级程序设计-前端跨域"><a href="#tags-Javscript高级程序设计-前端跨域" class="headerlink" title="tags:Javscript高级程序设计,前端跨域 "></a>tags:Javscript高级程序设计,前端跨域 </h2><p>###1.考虑兼容IE7之前的浏览器，创建XHR对象###</p>
+<pre><code>function createXHR(){
+    if(typeof XMLHttpRequest!=&quot;undefined&quot;){
+        return new XMLHttpRequest();
+    }else if(typeof ActiveXObject!=&quot;undefined&quot;){
+        if(typeof arguments.callee.activeXString!=&quot;string&quot;){
+            var versions=[&quot;MSXML2.XMLHttp.6.0&quot;,&quot;MSXML2.XMLHttp.3.0&quot;,&quot;MSXML2.XMLHttp&quot;];
+            var i,len;
+            for(i=0,len=versions.length;i&lt;len;i++){
+                try{
+                    new ActiveXObject(versions[i]);
+                    arguments.callee.activeXString=versions[i];
+                    break;
+                }catch(ex){
+                    //跳过
+                }
+            }
+        }
+        return new ActiveXObject(arguments.callee.activeXString);
+    }else{
+        throw new Error(&quot;No XHR object available.&quot;);
+    }
+}
+
+//发送同步请求
+var xhr=createXHR();
+xhr.open(&quot;get&quot;,&quot;example.txt&quot;,&quot;false&quot;);//false表示同步发送请求
+xhr.send(null);//null表示不需要请求主体发送数据
+
+//在接到响应以后，第一步是检查status属性，以确定响应已成功返回
+if((xhr.status&gt;=200&amp;&amp;xhr.status&lt;300)||xhr.status==304){
+    alert(xhr.responseText);
+}else{
+    alert(&quot;Response was unsuccessfull:&quot;+xhr.status);
+}
+</code></pre><p><br></p>
+<pre><code>//ajax发送异步请求
+var xhr=createXHR();
+xhr.onreadyStateChange=function(){
+    if(xhr.readyState==4){
+        if((xhr.status&gt;=200&amp;&amp;shr.status&lt;300)||xhr.status==304){
+            alert(xhr.responseText);
+        }else{
+            alert(&quot;Response was unsuccessfull:&quot;+xhr.status);
+        }
+    }
+};
+xhr.open(&quot;get&quot;,&quot;example.txt&quot;,true);
+xhr.send(null);
+</code></pre><p>###2.跨浏览器的CORS###<br>CORS的基本思想是，使用自定义的HTTP头部让浏览器与服务器进行沟通，从而决定请求或响应是应该成功，还是应该失败。</p>
+<pre><code>//考虑兼容性    
+function createCORSRequest(method,url){
+    var xhr=new XMLHttpRequest();
+    if(&quot;withCredentials&quot; in xhr){
+        xhr.open(method,url,true);//除IE8及以前版本的浏览器，使用XMLHttpRequest对象
+    }
+    else if(typeof XDomainRequest!=&quot;undefined&quot;){
+        xhr =new XDomainRequest();
+        xhr.open(method,url);//IE8及以前的版本所有XDR请求都是异步执行的，不能用他来创建同步请求
+    }
+    else{
+        xhr=null;
+    }
+    return xhr;
+}
+
+var request=createCORSRequest(&quot;get&quot;,&quot;http://www.somewhere-else.com/page/&quot;);
+if(request){
+    request.onload=function(){
+        //对request.responseText进行处理
+    };
+    request.send(null);
+}
+</code></pre><p>###3.JSONP实现跨域###<br>JSONP由两部分构成：回调函数和数据。回调函数,是当响应到来时，应该在页面中调用的函数<br>。数据，是传入回调函数中的JSON数据。</p>
+<pre><code>function handleResponse(response){
+    alert(&quot;You&apos;re at IP address &quot;+response.ip+&quot;, which is in &quot;+response.city+&quot;, &quot;+response.region_name);
+}
+
+var script=document.createElement(&quot;script&quot;);
+script.src=&quot;http://freegeoip.net/json/?callback=handleResponse&quot;;
+document.body.insertBefore(script,document.body.firstChild);
+</code></pre><p>###4.ajax和jsonp实现跨域的区别###</p>
+<p>（1） ajax和jsonp这两种技术在调用方式上“看起来”很像，目的也一样，都是请求一个url，然后把服务器返回的数据进行处理，因此jquery和ext等框架都把jsonp作为ajax的一种形式进行了封装；<br><br>（2）但ajax和jsonp其实本质上是不同的东西。ajax的核心是通过XmlHttpRequest获取非本页内容，使用XHR(XDR)对象并在open()方法中传入绝对URL；而jsonp的核心则是通过动态&lt;script&gt;元素来使用的，使用时可以为src属性指定一个跨域URL。</p>
+<p>参考博文：<a href="https://cwjinterview.github.io/2017/04/23/%E6%89%8B%E5%86%99ajax/" title="javascript_Ajax" target="_blank" rel="external">https://cwjinterview.github.io/2017/04/23/%E6%89%8B%E5%86%99ajax/</a><br><a href="http://www.cnblogs.com/Darren_code/p/cors.html" title="AJAX POST&amp;跨域 解决方案 - CORS" target="_blank" rel="external">http://www.cnblogs.com/Darren_code/p/cors.html</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/28/Ajax和跨域/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-JSON方法parse()" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1072,6 +1193,10 @@ cancel.cancel();//即可停止计数
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)">call/apply</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">Javscript高级程序设计</a>
               </li>
              
@@ -1081,10 +1206,6 @@ cancel.cancel();//即可停止计数
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)">面试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)">call/apply</a>
               </li>
             
             <div class="clearfix"></div>
