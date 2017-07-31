@@ -388,82 +388,6 @@ document.body.insertBefore(script,document.body.firstChild);
 
 
   
-    <article id="post-JSON方法parse()" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/27/JSON方法parse()/">JSON.parse()</a>
-    </h1>
-  
-
-        <a href="/2017/07/27/JSON方法parse()/" class="archive-article-date">
-  	<time datetime="2017-07-27T03:55:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-27</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>JSON.parse()接收第二个参数，该参数是个函数（函数的参数分别是属性名和值，而且都需要返回一个值）。如果返回值是undefined，则表示要从结果中删除相应的键；如果返回其他值，则将该值插入到结果中。</p>
-<pre><code>var book={
-    title:&quot;Professional JavaScript&quot;,
-    author:[
-        &quot;Nicholas C. Zakas&quot;
-    ],
-    edition:3,
-    year:2011,
-    releaseDate:new Date(2011,11,1)
-};
-
-var jsonText=JSON.stringify(book);
-
-var bookCopy=JSON.parse(jsonText,function(key,value){
-    if(key==&quot;releaseDate&quot;){
-        return new Date(value)//会使bookCopy.releaseDate属性中保存一个                          //Date对象，这样才能使用getFullYear()方法
-    }
-    else{
-        return value;
-    }
-});
-console.log(bookCopy);
-alert(bookCopy.releaseDate.getFullYear());
-</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javscript高级程序设计/">Javscript高级程序设计</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/27/JSON方法parse()/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
     <article id="post-JSON方法stringify()" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -572,6 +496,82 @@ console.log(jsonText);
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/07/27/JSON方法stringify()/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-JSON方法parse()" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/27/JSON方法parse()/">JSON.parse()</a>
+    </h1>
+  
+
+        <a href="/2017/07/27/JSON方法parse()/" class="archive-article-date">
+  	<time datetime="2017-07-27T03:55:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-27</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>JSON.parse()接收第二个参数，该参数是个函数（函数的参数分别是属性名和值，而且都需要返回一个值）。如果返回值是undefined，则表示要从结果中删除相应的键；如果返回其他值，则将该值插入到结果中。</p>
+<pre><code>var book={
+    title:&quot;Professional JavaScript&quot;,
+    author:[
+        &quot;Nicholas C. Zakas&quot;
+    ],
+    edition:3,
+    year:2011,
+    releaseDate:new Date(2011,11,1)
+};
+
+var jsonText=JSON.stringify(book);
+
+var bookCopy=JSON.parse(jsonText,function(key,value){
+    if(key==&quot;releaseDate&quot;){
+        return new Date(value)//会使bookCopy.releaseDate属性中保存一个                          //Date对象，这样才能使用getFullYear()方法
+    }
+    else{
+        return value;
+    }
+});
+console.log(bookCopy);
+alert(bookCopy.releaseDate.getFullYear());
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javscript高级程序设计/">Javscript高级程序设计</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/27/JSON方法parse()/">展开全文 >></a>
         </p>
       
 
@@ -1023,6 +1023,11 @@ var isAllenAgeValid = validator.call(allen);
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+	</div>
+
       
 
       
@@ -1215,15 +1220,19 @@ cancel.cancel();//即可停止计数
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">call/apply</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">面试</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)">腾讯课堂笔试题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)">call/apply</a>
               </li>
             
             <div class="clearfix"></div>
